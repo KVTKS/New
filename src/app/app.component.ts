@@ -11,6 +11,8 @@ import { JadualdanSubjekPage } from '../pages/jadualdan-subjek/jadualdan-subjek'
 import {AttendancePage} from '../pages/attendance/attendance';
 import { ViewPelajarPage } from '../pages/view-pelajar/view-pelajar';
 import { ReportPage } from '../pages/report/report';
+import { AttendancePelPage } from '../pages/attendance-pel/attendance-pel';
+import { HomepelPage } from '../pages/homepel/homepel';
 
 
 
@@ -34,6 +36,8 @@ export class MyApp {
       { title: 'Attendance', component: AttendancePage },
       { title: 'View Pelajar', component: ViewPelajarPage },
       { title: 'Report', component: ReportPage },
+      { title: 'Attendance Pelajar', component: AttendancePelPage },
+      { title: 'Home Pelajar', component: HomepelPage },
       
     ];
 

@@ -14,12 +14,16 @@ import {AttendancePage} from '../pages/attendance/attendance';
 import { ViewPelajarPage } from '../pages/view-pelajar/view-pelajar';
 import { ReportPage } from '../pages/report/report';
 import { CameraPage } from '../pages/camera/camera';
+import { AttendancePelPage } from '../pages/attendance-pel/attendance-pel';
+import { HomepelPage } from '../pages/homepel/homepel';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Camera } from '@ionic-native/camera';
 import {ParallaxDirective} from '../directives/parallax/parallax';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 
 @NgModule({
   declarations: [
@@ -33,7 +37,9 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
     ViewPelajarPage,
     ReportPage,
     ParallaxDirective,
-    CameraPage
+    CameraPage,
+    AttendancePelPage,
+    HomepelPage,
   ],
   imports: [
     BrowserModule,
@@ -54,13 +60,16 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
     AttendancePage,
     ViewPelajarPage,
     ReportPage,
-    CameraPage
+    CameraPage,
+    AttendancePelPage,
+    HomepelPage,
   ],
   providers: [
     StatusBar,
     SplashScreen,
     Camera,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    AuthServiceProvider
   ]
 })
 export class AppModule {}
